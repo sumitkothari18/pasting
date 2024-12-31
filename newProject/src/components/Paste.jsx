@@ -17,12 +17,12 @@ function Paste() {
       value={searchTerm}
       onChange={(e)=>setSearchTerm(e.target.value)}/>
 
-      <div className='flex flex-col gap-5'>
+      <div className='flex flex-col gap-5 mt-5'>
         {
           filteredData.length >0 &&
           filteredData.map(
             (paste) => {return (
-              <div>
+              <div className='border'>
                 {paste.title}
               </div>
             )}
