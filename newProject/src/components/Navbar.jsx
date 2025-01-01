@@ -1,16 +1,24 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-function Navbar() {
+import { NavbarData } from '../data/Navbar'
+const Navbar = () => {
   return (
-    <div className='flex flex-row gap-4 place-content-evenly'>
-        <NavLink  to="/">
-            Home
+    <div className="w-full h-[45px] flex justify-center items-center p-4 bg-gray-800 gap-x-5">
+      {NavbarData.map((link, idx) => (
+        <NavLink
+          key={idx}
+          to={link.path}
+          className={({ isActive }) =>
+            isActive
+              ? "text-blue-500 font-semibold text-xl"
+              : "text-white font-medium text-xl"
+          }
+        >
+          {link.title}
         </NavLink>
-        <NavLink to="/pastes">
-            Paste
-        </NavLink>
+      ))}
     </div>
-  )
-}
+  );
+};
 
 export default Navbar

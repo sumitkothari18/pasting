@@ -65,6 +65,6 @@ const pasteSlice = createSlice({
   },
 })
 
-export const { addToPaste, removeFromPaste, updatePaste} = pasteSlice.actions
+export const { addToPaste, removeFromPaste, updatePaste,resetPaste} = pasteSlice.actions
 
 export default pasteSlice.reducer
