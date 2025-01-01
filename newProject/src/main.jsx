@@ -11,7 +11,7 @@ createRoot(document.getElementById('root')).render(
     <Provider store={store}>
     <div className="min-h-screen w-screen overflow-hidden">
         <App />
-        <Toaster position="top-right"/>
+        {/* <Toaster position="top-right"/> */}
       </div>
     <Toaster/>
     </Provider>
